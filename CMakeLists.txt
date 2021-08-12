@@ -1,0 +1,422 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(
+  ttf-ms-win10
+  VERSION 10.0.19042.789
+)
+
+set(fonts_pos share/fonts/ttf-ms-win10)
+
+
+# define start
+# set(HoloLens_font MDL2 Assets Holomdl2.ttf) 此字体缺失
+
+set(
+  arial_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/arial.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ariali.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/arialbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/arialbi.ttf
+)
+set(
+  arial_black_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ariblk.ttf
+)
+set(
+  bahnschrift_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/bahnschrift.ttf
+)
+set(
+  calibri_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibril.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibrili.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibri.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibrii.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibrib.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/calibriz.ttf
+)
+set(
+  cambria_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambria.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambriai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambriab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambriaz.ttf
+)
+# set(
+#   cambria_math_font
+#   ${CMAKE_CURRENT_BINARY_DIR}/fonts/cambria.ttc
+# )
+set(
+  candara_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candaral.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candarali.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candara.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candarai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candarab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Candaraz.ttf
+)
+set(
+  comic_sans_ms_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/comic.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/comici.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/comicbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/comicz.ttf
+)
+set(
+  consolas_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/consola.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/consolai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/consolab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/consolaz.ttf
+)
+set(
+  constantia_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/constan.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/constani.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/constanb.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/constanz.ttf
+)
+set(
+  corbel_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbell.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbelli.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbel.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbeli.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbelb.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/corbelz.ttf
+)
+set(
+  courier_new_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cour.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/couri.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/courbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/courbi.ttf
+)
+set(
+  ebrima_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ebrima.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ebrimabd.ttf
+)
+set(
+  franklin_gothic_medium_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/framd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/framdit.ttf
+)
+set(
+  gabriola_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Gabriola.ttf
+)
+set(
+  gadugi_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/gadugi.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/gadugib.ttf
+)
+set(
+  georgia_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgia.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiaz.ttf
+)
+set(
+  impact_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/impact.ttf
+)
+set(
+  ink_Free_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Inkfree.ttf
+)
+set(
+  javanese_text_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/javatext.ttf
+)
+set(
+  leelawadee_UI_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/LeelawUI.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/LeelUIsl.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/LeelaUIb.ttf
+)
+set(
+  lucida_console_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/lucon.ttf
+)
+set(
+  lucida_sans_unicode_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/l_10646.ttf
+)
+set(
+  malgun_gothic_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/malgun.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/malgunbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/malgunsl.ttf
+)
+set(
+  marlett_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/marlett.ttf
+)
+set(
+  microsoft_himalaya_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/himalaya.ttf
+)
+set(
+  microsoft_jhenghei_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msjhl.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msjh.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msjhbd.ttc
+)
+set(
+  microsoft_new_tai_lua_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ntailu.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/ntailub.ttf
+)
+set(
+  microsoft_phagspa_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/phagspa.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/phagspab.ttf
+)
+set(
+  microsoft_sans_serif_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/micross.ttf
+)
+set(
+  microsoft_tai_le_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/taile.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/taileb.ttf
+)
+set(
+  microsoft_yahei_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msyhl.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msyh.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msyhbd.ttc
+)
+set(
+  microsoft_yi_baiti_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msyi.ttf
+)
+set(
+  mingliu-extb_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mingliub.ttc
+)
+set(
+  mongolian_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/monbaiti.ttf
+)
+set(
+  ms_gothic_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/msgothic.ttc
+)
+set(
+  mv_boli_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mvboli.ttf
+)
+set(
+  myanmar_text_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mmrtext.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mmrtextb.ttf
+  )
+set(
+  Nirmala_UI_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/NirmalaS.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Nirmala.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/NirmalaB.ttf
+)
+set(
+  palatino_linotype_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/pala.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/palai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/palab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/palabi.ttf
+)
+set(
+  segoe_mdl2_assets_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segmdl2.ttf
+)
+set(
+  segoe_print_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoepr.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeprb.ttf
+)
+set(
+  segoe_script_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoesc.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoescb.ttf
+)
+set(
+  segoe_ui_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeuil.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguili.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeuisl.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguisli.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeui.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeuii.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguisb.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguisbi.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeuib.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/segoeuiz.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguibl.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguibli.ttf
+)
+set(
+  segoe_ui_historic_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguihis.ttf
+)
+set(
+  segoe_ui_emoji_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguiemj.ttf
+)
+set(
+  segoe_ui_symbol_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/seguisym.ttf
+)
+set(
+  simsun_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simsun.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts//simsunb.ttf
+)
+set(
+  Sitka_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Sitka.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/SitkaI.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/SitkaB.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/SitkaZ.ttc
+)
+set(
+  sylfaen_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/sylfaen.ttf
+)
+set(
+  symbol_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/symbol.ttf
+)
+set(
+  tahoma_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/tahoma.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/tahomabd.ttf
+)
+set(
+  times_new_roman_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/times.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/timesi.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/timesbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/timesbi.ttf
+)
+set(
+  trebuchet_ms_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/trebuc.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/trebucit.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/trebucbd.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/trebucbi.ttf
+)
+set(
+  verdana_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/verdana.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/verdanai.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/verdanab.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/verdanaz.ttf
+)
+set(
+  webdings_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/webdings.ttf
+)
+set(
+  wingdings_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/wingding.ttf
+)
+set(
+  yu_Gothic_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/YuGothL.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/YuGothR.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/YuGothM.ttc
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/YuGothB.ttc
+)
+
+set(
+  ALL_FONTS
+  arial_font
+  arial_black_font
+  bahnschrift_font
+  calibri_font
+  cambria_font
+  cambria_math_font
+  candara_font
+  comic_sans_ms_font
+  consolas_font
+  constantia_font
+  corbel_font
+  courier_new_font
+  ebrima_font
+  franklin_gothic_medium_font
+  gabriola_font
+  gadugi_font
+  georgia_font
+  impact_font
+  ink_Free_font
+  javanese_text_font
+  leelawadee_UI_font
+  lucida_console_font
+  lucida_sans_unicode_font
+  malgun_gothic_font
+  marlett_font
+  microsoft_himalaya_font
+  microsoft_jhenghei_font
+  microsoft_new_tai_lua_font
+  microsoft_phagspa_font
+  microsoft_sans_serif_font
+  microsoft_tai_le_font
+  microsoft_yahei_font
+  microsoft_yi_baiti_font
+  mingliu-extb_font
+  mongolian_baiti_font
+  ms_gothic_font
+  mv_boli_font
+  myanmar_text_font
+  Nirmala_UI_font
+  palatino_linotype_font
+  segoe_print_font
+  segoe_script_font
+  segoe_ui_font
+  segoe_ui_historic_font
+  segoe_ui_emoji_font
+  segoe_ui_symbol_font
+  simsun_font
+  Sitka_font
+  sylfaen_font
+  symbol_font
+  tahoma_font
+  times_new_roman_font
+  trebuchet_ms_font
+  verdana_font
+  webdings_font
+  wingdings_font
+  yu_Gothic_font
+)
+
+# 创建打包规则
+foreach(font_item ${ALL_FONTS})
+    install(
+        FILES
+        ${${font_item}}
+        DESTINATION share/fonts
+        COMPONENT ${font_item}
+        )
+endforeach()
+
+set(CPACK_GENERATOR "RPM")
+set(CPACK_PACKAGE_DIRECTORY "${CMAKE_BINARY_DIR}/pack")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/extern/ttf-ms-win10/license.rtf")
+set(CPACK_STRIP_FILES ON)
+
+set(CPACK_PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
+set(CPACK_RPM_PACKAGE_GROUP ttf-ms-win10)
+set(CPACK_RPM_PACKAGE_LICENSE "custom")
+
+set(CPACK_COMPONENTS_GROUPING ONE_PER_GROUP)
+set(CPACK_RPM_COMPONENT_INSTALL ON)
+include(CPack)
+
+cpack_add_component(arial)
+
+# 创建组件
+foreach(font_item ${ALL_FONTS})
+    cpack_add_component(${font_item})
+endforeach()
