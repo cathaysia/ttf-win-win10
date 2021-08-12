@@ -5,11 +5,78 @@ project(
   VERSION 10.0.19042.789
 )
 
-set(fonts_pos share/fonts/ttf-ms-win10)
-
-
+set(
+  ALL_FONTS
+  arial_font
+  arial_black_font
+  bahnschrift_font
+  calibri_font
+  cambria_font
+  cambria_math_font
+  candara_font
+  comic_sans_ms_font
+  consolas_font
+  constantia_font
+  corbel_font
+  courier_new_font
+  ebrima_font
+  franklin_gothic_medium_font
+  gabriola_font
+  gadugi_font
+  georgia_font
+  hololens_mdl2_assets_font
+  impact_font
+  ink_Free_font
+  javanese_text_font
+  leelawadee_UI_font
+  lucida_console_font
+  lucida_sans_unicode_font
+  malgun_gothic_font
+  marlett_font
+  microsoft_himalaya_font
+  microsoft_jhenghei_font
+  microsoft_new_tai_lua_font
+  microsoft_phagspa_font
+  microsoft_sans_serif_font
+  microsoft_tai_le_font
+  microsoft_yahei_font
+  microsoft_yi_baiti_font
+  mingliu-extb_font
+  mongolian_baiti_font
+  ms_gothic_font
+  mv_boli_font
+  myanmar_text_font
+  Nirmala_UI_font
+  palatino_linotype_font
+  segoe_print_font
+  segoe_script_font
+  segoe_ui_font
+  segoe_ui_historic_font
+  segoe_ui_emoji_font
+  segoe_ui_symbol_font
+  simsun_font
+  Sitka_font
+  sylfaen_font
+  symbol_font
+  tahoma_font
+  times_new_roman_font
+  trebuchet_ms_font
+  verdana_font
+  webdings_font
+  wingdings_font
+  yu_Gothic_font
+  mingliu_font
+  simhei_font
+  kaiti_font
+  fangsong_font
+  dengxian_font
+  wingdings2_font
+  wingdings3_font
+  dfkai_sb_font
+  mt_extra_font
+  mingliu_hkscs_font
+)
 # define start
-# set(HoloLens_font MDL2 Assets Holomdl2.ttf) 此字体缺失
 
 set(
   arial_font
@@ -42,7 +109,7 @@ set(
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambriab.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/cambriaz.ttf
 )
-# set(
+# set( # 此字体与上面的字体重复
 #   cambria_math_font
 #   ${CMAKE_CURRENT_BINARY_DIR}/fonts/cambria.ttc
 # )
@@ -117,6 +184,10 @@ set(
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiai.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiab.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/georgiaz.ttf
+)
+set(
+  hololens_mdl2_assets_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/holomdl2.ttf
 )
 set(
   impact_font
@@ -332,27 +403,37 @@ set(
 
 # 中文补充字体
 set(
-  dengxian_font
+  dengxian_font # 等线
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Dengb.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Dengl.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Deng.ttf
 )
 set(
-  fangsong_font
+  fangsong_font # 仿宋
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simfang.ttf
 )
 set(
-  kaiti_font
+  kaiti_font # 楷体
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simkai.ttf
 )
 set(
-  simhei_font
+  simhei_font # 黑体
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simhei.ttf
 )
 # 中文繁体补充字体
-set(dfkai_sb_font) # 这个字体没有
 set(
-  mingliu_font
+  dfkai_sb_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/kaiu.ttf
+)
+set(
+  mingliu_font # PMingLiu, MingLiu_HKSCS, MingLiU
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mingliu.ttc
+)
+
+# 未被列出的繁中补充字体
+
+set(
+  mingliu_hkscs_font # 刘明, MingLuU_HKSCS_extB, MingLiu-ExtB, PMingLiU-ExtB
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mingliub.ttc
 )
 
@@ -369,74 +450,7 @@ set(
   mt_extra_font
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/MTEXTRA.TTF
 )
-set(
-  ALL_FONTS
-  arial_font
-  arial_black_font
-  bahnschrift_font
-  calibri_font
-  cambria_font
-  cambria_math_font
-  candara_font
-  comic_sans_ms_font
-  consolas_font
-  constantia_font
-  corbel_font
-  courier_new_font
-  ebrima_font
-  franklin_gothic_medium_font
-  gabriola_font
-  gadugi_font
-  georgia_font
-  impact_font
-  ink_Free_font
-  javanese_text_font
-  leelawadee_UI_font
-  lucida_console_font
-  lucida_sans_unicode_font
-  malgun_gothic_font
-  marlett_font
-  microsoft_himalaya_font
-  microsoft_jhenghei_font
-  microsoft_new_tai_lua_font
-  microsoft_phagspa_font
-  microsoft_sans_serif_font
-  microsoft_tai_le_font
-  microsoft_yahei_font
-  microsoft_yi_baiti_font
-  mingliu-extb_font
-  mongolian_baiti_font
-  ms_gothic_font
-  mv_boli_font
-  myanmar_text_font
-  Nirmala_UI_font
-  palatino_linotype_font
-  segoe_print_font
-  segoe_script_font
-  segoe_ui_font
-  segoe_ui_historic_font
-  segoe_ui_emoji_font
-  segoe_ui_symbol_font
-  simsun_font
-  Sitka_font
-  sylfaen_font
-  symbol_font
-  tahoma_font
-  times_new_roman_font
-  trebuchet_ms_font
-  verdana_font
-  webdings_font
-  wingdings_font
-  yu_Gothic_font
-  mingliu_font
-  simhei_font
-  kaiti_font
-  fangsong_font
-  dengxian_font
-  wingdings2_font
-  wingdings3_font
-  mt_extra_font
-)
+
 
 # 创建打包规则
 foreach(font_item ${ALL_FONTS})
