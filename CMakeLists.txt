@@ -355,6 +355,20 @@ set(
   mingliu_font
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mingliub.ttc
 )
+
+# 其他未被列出的字体
+set(
+  wingdings2_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/WINGDNG2.TTF
+)
+set(
+  wingdings3_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/WINGDNG3.TTF
+)
+set(
+  mt_extra_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/MTEXTRA.TTF
+)
 set(
   ALL_FONTS
   arial_font
@@ -419,6 +433,9 @@ set(
   kaiti_font
   fangsong_font
   dengxian_font
+  wingdings2_font
+  wingdings3_font
+  mt_extra_font
 )
 
 # 创建打包规则
