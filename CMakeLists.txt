@@ -213,7 +213,7 @@ set(
   myanmar_text_font
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mmrtext.ttf
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mmrtextb.ttf
-  )
+)
 set(
   Nirmala_UI_font
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/NirmalaS.ttf
@@ -330,6 +330,31 @@ set(
   ${CMAKE_CURRENT_SOURCE_DIR}/fonts/YuGothB.ttc
 )
 
+# 中文补充字体
+set(
+  dengxian_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Dengb.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Dengl.ttf
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/Deng.ttf
+)
+set(
+  fangsong_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simfang.ttf
+)
+set(
+  kaiti_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simkai.ttf
+)
+set(
+  simhei_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/simhei.ttf
+)
+# 中文繁体补充字体
+set(dfkai_sb_font) # 这个字体没有
+set(
+  mingliu_font
+  ${CMAKE_CURRENT_SOURCE_DIR}/fonts/mingliub.ttc
+)
 set(
   ALL_FONTS
   arial_font
@@ -389,27 +414,33 @@ set(
   webdings_font
   wingdings_font
   yu_Gothic_font
+  mingliu_font
+  simhei_font
+  kaiti_font
+  fangsong_font
+  dengxian_font
 )
 
 # 创建打包规则
 foreach(font_item ${ALL_FONTS})
-    install(
-        FILES
-        ${${font_item}}
-        DESTINATION share/fonts
-        COMPONENT ${font_item}
-        )
+  install(
+    FILES
+    ${${font_item}}
+    DESTINATION share/fonts/ttf-ms-win10
+    COMPONENT ${font_item}
+  )
 endforeach()
 
 set(CPACK_GENERATOR "RPM")
 set(CPACK_PACKAGE_DIRECTORY "${CMAKE_BINARY_DIR}/pack")
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/extern/ttf-ms-win10/license.rtf")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/fonts/license.rtf")
 set(CPACK_STRIP_FILES ON)
 
 set(CPACK_PACKAGE_VERSION ${CMAKE_PROJECT_VERSION})
 set(CPACK_RPM_PACKAGE_GROUP ttf-ms-win10)
 set(CPACK_RPM_PACKAGE_LICENSE "custom")
 
+set(CPACK_RPM_POST_INSTALL_SCRIPT_FILE ${CMAKE_CURRENT_SOURCE_DIR}/scripts/postinst)
 set(CPACK_COMPONENTS_GROUPING ONE_PER_GROUP)
 set(CPACK_RPM_COMPONENT_INSTALL ON)
 include(CPack)
@@ -418,5 +449,5 @@ cpack_add_component(arial)
 
 # 创建组件
 foreach(font_item ${ALL_FONTS})
-    cpack_add_component(${font_item})
+  cpack_add_component(${font_item})
 endforeach()
